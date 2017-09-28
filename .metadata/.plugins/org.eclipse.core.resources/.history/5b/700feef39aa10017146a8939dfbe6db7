@@ -1,0 +1,11 @@
+package java_Comparable_sort;
+
+import java.util.ArrayList;
+
+public class sort_main {
+public static void main(String[] args) {
+	ArrayList list=new ArrayList();
+	
+	Student s1=new Student(18, "张三", 76, 1)；
+}
+}

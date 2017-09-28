@@ -1,0 +1,19 @@
+package java_02_String_endwith;
+
+import java.util.Scanner;
+
+public class test_main {
+	public static void main(String[] args) {
+		Scanner input= new Scanner (System.in);
+		System.out.println("请输入文件");
+		Boolean b=false;
+		while(!b){
+			String str=input.next();
+			System.out.println("文件错误");
+			 b =str.endsWith(".java");
+			
+		}
+		
+		 System.out.println("正确");
+	}
+}

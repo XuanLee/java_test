@@ -1,0 +1,16 @@
+package java_02_danli;
+
+public class Person {
+	private int age;
+	private static Person p=new Person();
+	public static Person getP(){
+	return p;
+	}
+	public int getAge(){
+		return age;
+	}
+	//禁止外界创建构造方法
+	private Person(){
+		
+	}
+}

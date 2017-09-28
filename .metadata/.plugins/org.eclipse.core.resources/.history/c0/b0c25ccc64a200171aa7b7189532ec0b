@@ -1,0 +1,5 @@
+package java_02_enum;
+
+public enum Student {
+	U1,U2,U3;
+}

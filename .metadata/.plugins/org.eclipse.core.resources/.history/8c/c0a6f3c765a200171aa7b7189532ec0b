@@ -1,0 +1,15 @@
+package java_02_enum;
+
+public class Student {
+	private Course course;
+	private String U1;
+	public Course getCourse() {
+		return course;
+	}
+
+	public void setCourse(Course course) {
+		this.course = course;
+	}
+
+
+}

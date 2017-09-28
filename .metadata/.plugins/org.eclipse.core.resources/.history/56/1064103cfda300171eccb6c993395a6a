@@ -1,0 +1,39 @@
+package java_02_String_endwith;
+
+import java.sql.Array;
+import java.util.Scanner;
+
+public class test_main {
+	static 		Scanner input= new Scanner (System.in);
+
+	public static void main(String[] args) {
+		int i=0;
+		System.out.println("请输入字符串");
+		String str=input.next();
+		System.out.println("请输入字符");
+		String char1=input.next();
+		
+		String strArray[]=str.split("");
+//		char [] a=new char[str.length()];
+//		a=str.toCharArray();
+		for(String tmp : strArray){
+			if(str.equals(char1)){
+				System.out.println("相等");
+				i++;
+			}
+		}
+		System.out.println("出现"+i+"次");
+
+	}
+	public static void test1(){
+		Boolean b=false;
+		while(!b){
+			System.out.println("请输入文件");
+			String str=input.next();
+			 b =str.endsWith(".java");
+			
+		}
+		
+		 System.out.println("正确");
+	}
+}

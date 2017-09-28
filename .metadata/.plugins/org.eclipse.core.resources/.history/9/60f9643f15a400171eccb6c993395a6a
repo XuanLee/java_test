@@ -1,0 +1,51 @@
+package java_02_String_endwith;
+
+import java.sql.Array;
+import java.util.Scanner;
+
+public class test_main {
+	static 		Scanner input= new Scanner (System.in);
+
+	//hellohe
+	//0123456
+	//he
+	//取出he的个数
+	public static void main(String[] args) {
+//		int i=0;
+		int tag=0;
+		System.out.println("请输入字符串");
+		String str=input.next();
+		System.out.println(str.substring(5, 7));
+		//将字符串转换为数组
+		String strArray[]=str.split("");
+		System.out.println("请输入字符");
+		String char1=input.next();
+		// 	取出第一个字符
+		String fristStr=char1.charAt(0)+"";
+		System.out.println(fristStr);
+		
+		String tmp = "";
+		for (int i = 0; i < strArray.length; i++,tag++) {
+			if (strArray[i].equals(fristStr)) {
+				if(tag<strArray.length)
+				{
+				System.out.println(tag);
+				tmp = str.substring(tag, tag+char1.length());
+				System.out.println("截取的字符串:"+tmp);
+				}
+			}
+		}
+
+	}
+	public static void test1(){
+		Boolean b=false;
+		while(!b){
+			System.out.println("请输入文件");
+			String str=input.next();
+			 b =str.endsWith(".java");
+			
+		}
+		
+		 System.out.println("正确");
+	}
+}

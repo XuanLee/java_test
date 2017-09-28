@@ -1,0 +1,20 @@
+package java_hashMap;
+
+import java.util.HashMap;
+
+public class hashMap_main {
+public static void main(String[] args) {
+	
+	HashMap map=new HashMap();
+	
+	//设置
+	map.put("班长", "熊二");
+	map.put("学委", "张三");
+	map.put("体委", "李四");
+	map.put("纪委", "王五");
+
+	String f1=(String)map.get("班长");
+	System.out.println("班长："+f1);
+	
+}
+}
