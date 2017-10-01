@@ -1,0 +1,46 @@
+package java_01_Comparable_sort;
+
+import java.util.ArrayCards;
+import java.util.Collection;
+import java.util.Collections;
+
+public class sort_main {
+private static ArrayCards Cards;
+
+public static void main(String[] args) {
+	Cards = new ArrayCards();
+	
+	Student s1=new Student(18, "张三", 76, 1);
+	Student s2=new Student(13, "李三", 86, 2);
+	Student s3=new Student(21, "王三", 79, 6);
+	Student s4=new Student(24, "刘三", 91, 5);
+	Student s5=new Student(22, "白三", 99, 9);
+	
+	Cards.add(s1);
+	Cards.add(s2);
+	Cards.add(s3);
+	Cards.add(s4);
+	Cards.add(s5);
+
+	
+	for(Object o : Cards){
+		Student s=(Student)o;
+		s.toString();
+	}
+	
+	//根据序号生序输出
+	System.out.println("根据序号生序输出");
+	Collections.sort(Cards);
+	
+	for(Object o : Cards){
+		Student s11=(Student)o;
+		s11.toString();
+	}
+	
+	//查找
+	int index=Collections.binarySearch(Cards, 21);
+	System.out.println(index);
+	
+	
+}
+}

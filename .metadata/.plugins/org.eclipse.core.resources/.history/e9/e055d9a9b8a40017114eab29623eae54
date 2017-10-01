@@ -1,0 +1,29 @@
+package java_02_StringBuffer_test;
+
+import java.util.Scanner;
+
+//21342134 11 8 5 2  11-(0,1,2)*3
+//01234567
+//     2,5
+public class insert_main {
+	public static void main(String[] args) {
+		
+		Scanner input =new Scanner (System.in);
+		String str="";
+		System.out.println("请输入一串数字");
+		str=input.nextLine();
+		
+		StringBuffer strBuffer=new StringBuffer(str);
+//		strBuffer.insert(1, ',');
+//		System.out.println(strBuffer);
+		
+		for(int i=strBuffer.length();i>0;i--)
+		for(int j=0;j<strBuffer.length()/3;j++){
+			if(i>3)
+				strBuffer.insert(j, ',');
+			if(i<3)
+				break;
+		}
+		System.out.println(strBuffer);
+	}
+}

@@ -1,0 +1,75 @@
+package java_02_StringBuffer_test;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Scanner;
+import java.util.Set;
+
+import java_01_hashMap.hashMap_main;
+
+public class Shopping {
+	static 	ArrayList<Good> arraylist=new ArrayList<Good>();
+
+public static void main(String[] args) {
+	
+	init();
+	showMenu();
+
+	
+	
+	System.out.println("请输入你要批发的商品序号");
+	Scanner input=new Scanner (System.in);
+	int num=input.nextInt();
+	System.out.println("请输入你要批发的数量");
+	int count=input.nextInt();
+
+	switch(num){
+	case 1:{
+		
+		break;
+		}
+	case 2:{
+		break;
+		}
+	case 3:{
+		break;
+		}
+	case 4:{
+		break;
+		}
+	case 5:{
+		break;
+		}
+		default :System.out.println("没有此商品");
+	}
+	
+	
+}
+public static void init(){
+	Good g1=new Good("电风扇", 123.23);
+	Good g2=new Good("洗衣机", 123.23);
+	Good g3=new Good("电视机", 123.23);
+	Good g4=new Good("冰箱", 123.23);
+	Good g5=new Good("空调机", 123.23);
+
+	arraylist.add(g1);
+	arraylist.add(g2);
+	arraylist.add(g3);
+	arraylist.add(g4);
+	arraylist.add(g5);	
+}
+public static void showMenu(){
+	System.out.println("*********欢迎进入商品批发城*********");
+	System.out.println("编号\t商品\t序号");
+	for(int i=0;i<arraylist.size();i++){
+		Good g1=arraylist.get(i);
+		System.out.println(i+"\t"+g1.getName()+"\t"+g1.getPrise());
+	}
+	
+	System.out.println("**********************************");
+	
+	
+}
+}

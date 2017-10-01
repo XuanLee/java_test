@@ -1,0 +1,38 @@
+package java_02_StringBuffer_test;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+import java_01_hashMap.hashMap_main;
+
+public class Shopping {
+public static void main(String[] args) {
+	
+	HashMap<String,Double> map=new HashMap<String, Double>();
+	map.put("电风扇", 124.23);
+	map.put("洗衣机", 4500.0);
+	map.put("电视机", 8800.9);
+	map.put("冰箱", 5000.88);
+	map.put("空调机", 4456.0);
+
+	//取出所有key
+ 	Set s=map.keySet();
+ 	
+ 	
+	Collection c= map.values();
+	Iterator itV=c.iterator();
+ 	Iterator it= s.iterator();
+	while(it.hasNext()){
+		String str=(String)it.next();
+		double price=(Double) itV.next();
+		System.out.println(str+price);
+	}
+	
+//	while(it1.hasNext()){
+//		String str=(String)it1.next();
+//		System.out.println("所有value"+str);
+//	}
+}
+}
