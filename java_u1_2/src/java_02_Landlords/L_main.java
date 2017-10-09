@@ -1,8 +1,12 @@
 package java_02_Landlords;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
+
+import java_01_Comparable_sort.Student;
 
 /*
  * 把集合这块，我们做个小练习，模拟斗地主洗牌发牌
@@ -17,8 +21,11 @@ import java.util.Scanner;
                                    17 ,16 ,15 14 13 12 11 10                               
  */
 public class L_main {
+	
 	/**总牌数*/
 	static 	ArrayList<Integer> list=new ArrayList<Integer>();
+	
+
 	/**a的牌*/
 	static ArrayList<Integer> aCards=new ArrayList<Integer>();
 	/**b的牌*/
@@ -30,6 +37,8 @@ public class L_main {
 
 public static void main(String[] args) {
 	
+	
+
 		// 1.组装牌
 		initList();
 		
@@ -50,9 +59,13 @@ public static void main(String[] args) {
 /** 看牌*/
 public static void lookCards(){
 	//排序
-	Collections.sort(aCards);
-	Collections.sort(bCards);
-	Collections.sort(cCards);
+	//API上说这个方法返回一个比较器，它强行逆转实现了 Comparable 接口的对象 collection 的自然顺序。
+	Collections.sort(aCards,Collections.reverseOrder());
+	Collections.sort(bCards,Collections.reverseOrder());
+	Collections.sort(cCards,Collections.reverseOrder());
+	//Collections.sort(aCards);	
+//	Collections.sort(bCards);
+//	Collections.sort(cCards);
 	
 	System.out.println("a的牌为");
 	Format(aCards);
@@ -111,6 +124,8 @@ public static void initList(){
 		}
 		list.add(16);
 		list.add(17);
+
+
 }
 /**遍历*/
 public static void traverse(){
@@ -152,7 +167,10 @@ public static void shuffle(int n,int n1){
 	//2.3将tmp集合添加到list数组后面
 	for(int i=0;i<tmp.size();i++){
 		list.add(tmp.get(i));
-	}
+		}
 	//traverse();
+	}
 }
-}
+
+
+
