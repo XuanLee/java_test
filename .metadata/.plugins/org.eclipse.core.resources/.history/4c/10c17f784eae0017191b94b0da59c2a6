@@ -1,0 +1,25 @@
+package java_iO_day2;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class outputStream_main {
+public static void main(String[] args) throws Exception {
+
+	//1.创建目标源
+	File file =new File("abctest.txt");
+	System.out.println(file.isFile());
+	//2.创建流 输出流
+	FileOutputStream out =new FileOutputStream(file); 
+	//3.操作
+	//把数字对应的ASI码写入
+	out.write(65);
+	
+	byte [] b=new byte[]{11,22,33,44};
+	out.write(b);
+	//4.关闭
+	out.close();
+}
+}

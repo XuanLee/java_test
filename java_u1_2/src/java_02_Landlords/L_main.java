@@ -13,7 +13,7 @@ import java_01_Comparable_sort.Student;
 功能：按照斗地主的规则，完成洗牌、发牌的动作。
 具体规则：
 	1. 组装54张扑克牌
-            2. 将54张牌顺序打乱
+    2. 将54张牌顺序打乱
 	3. 三个玩家参与游戏，三人交替摸牌，每人17张牌，最后三张留作底牌。
 	4. 查看三人各自手中的牌（按照牌的大小排序）、底牌
 
@@ -36,8 +36,6 @@ public class L_main {
 	static ArrayList<Integer> bottomCards=new ArrayList<Integer>();
 
 public static void main(String[] args) {
-	
-	
 
 		// 1.组装牌
 		initList();
@@ -124,8 +122,6 @@ public static void initList(){
 		}
 		list.add(16);
 		list.add(17);
-
-
 }
 /**遍历*/
 public static void traverse(){
@@ -157,7 +153,7 @@ public static void shuffle(int n,int n1){
 	for (int i = n; i < n1; i++) {
 		tmp.add(list.get(i));
 	}
-
+	
 	// 2.2删除list集合n~n1
 	for (int i = n; i < n1; i++) {
 		int a1 = list.remove(n);
@@ -171,6 +167,3 @@ public static void shuffle(int n,int n1){
 	//traverse();
 	}
 }
-
-
-

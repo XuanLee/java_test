@@ -1,0 +1,14 @@
+package java_iO_day2;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.Reader;
+
+public class FileReaderInput_main {
+public static void main(String[] args) throws FileNotFoundException {
+		
+	File file =new File("abctest.txt");
+	FileReader reader =new FileReader(file);
+}
+}

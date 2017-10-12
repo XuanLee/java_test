@@ -1,0 +1,16 @@
+package java_filePath;
+
+import java.io.File;
+import java.io.IOException;
+
+public class test_main {
+public static void main(String[] args) throws IOException {
+	File file1=new File("/Users/lee/Desktop/");
+	File file=new File("abc");
+	//绝对路径
+	String absolutePath =file.getAbsolutePath();
+	System.out.println(absolutePath);
+	System.out.println(file.getCanonicalPath());
+	
+}
+}
