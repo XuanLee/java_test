@@ -9,7 +9,7 @@ public static void main(String[] args) {
 //	int sum=getSum(n);
 //	System.out.println(sum);
 	
-	File file=new File("/Users/lee/Desktop/abc");
+	File file=new File("/Users/lee/Desktop/tmp");
 	getAll(file);
 	
 }
@@ -24,6 +24,7 @@ public static void main(String[] args) {
 			 getAll(file2);
 			}
 			else if(!file2.isHidden())//筛选掉隐藏的文件
+				//所有文件
 				System.out.println(file2);
 		}
 		

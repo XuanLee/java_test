@@ -73,6 +73,7 @@ public static void main(String[] args) throws IOException {
 			long begin =System.currentTimeMillis();
 			BufferedReader reder =new BufferedReader(new FileReader(srcFile));
 			BufferedWriter writer =new BufferedWriter(new FileWriter(destFile));
+			
 			char []chats =new char[1024];
 			int len =-1;
 			while((len = reder.read(chats))!= -1){

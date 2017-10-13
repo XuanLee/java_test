@@ -1,0 +1,33 @@
+package java_iO_day3;
+
+import java.io.File;
+
+public class test_main {
+	public static void main(String[] args) {
+		File file = new File("/Users/lee/Desktop/tmp ");
+		getAll(file);
+	}
+	static void getAll(File file){
+		File[] files=file.listFiles();
+		for (File file2 : files) {
+			//判断有没有目录
+			if(file2.isDirectory()){
+				getAll(file2);
+			}
+			//拿到所有文件
+			else {
+			 Filtrate(file2.getName()); 	
+			}
+		}
+	}
+	/*过滤文件*/
+	static void Filtrate(String fileName){
+		//1.找到 . 出现的最后一次位置
+		int index=fileName.lastIndexOf(".");
+		//2.截取后缀名
+		String srcStr=fileName.substring(index+1);
+		if("txt".equals(srcStr)){
+			System.out.println(fileName);
+		}
+	}
+}

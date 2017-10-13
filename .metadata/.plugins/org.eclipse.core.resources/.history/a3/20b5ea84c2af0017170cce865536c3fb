@@ -1,0 +1,18 @@
+package com.java.IO.PropertiesDemo;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+public class test_main {
+public static void main(String[] args) throws IOException {
+	File file =new File("/Users/lee/Desktop/LXDB.propertiest");
+	Properties pro =new Properties();
+	InputStream in = new FileInputStream(file);
+	pro.load(in);
+	System.out.println(pro.getProperty("name"));
+}
+}
