@@ -1,0 +1,13 @@
+package java_Thread_day1;
+
+public class mainThread_dmo{
+	public static void main(String[] args) {
+	 subThread sub = new subThread();
+	 sub.start();
+	 for(int i=0;i<55;i++){
+		 System.out.println(sub.getName()+i);
+	 }
+		
+	}
+	
+}

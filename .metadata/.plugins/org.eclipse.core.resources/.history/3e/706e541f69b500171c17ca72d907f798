@@ -1,0 +1,40 @@
+package com.lx._reflect_text;
+
+
+import org.junit.Test;;
+public class TestApp {
+ 
+	//正常执行
+	//@Test
+	public void demo1(){
+		
+		MyServlet ms = new HelloMyServlet();
+		ms.init();
+		ms.destory();
+		ms.service();
+	}
+	
+	//反射执行
+	@Test
+	public void demo2(){
+		//1.拿到HelloMyServlet 类名
+		Class<MyServlet> myServletClass = MyServlet.class;
+		//Class myServletClass = Class.forName("com.lx._reflect.HelloMyServlet");
+		 
+		MyServlet m1;
+		try {
+			m1 = (HelloMyServlet) myServletClass.newInstance();
+			m1.destory();
+			m1.init();
+			m1.service();
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+}

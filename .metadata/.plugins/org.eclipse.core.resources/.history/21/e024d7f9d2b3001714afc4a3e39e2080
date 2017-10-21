@@ -1,0 +1,44 @@
+package java_Mysql;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.util.Scanner;
+
+public class test2_Select {
+public static void main(String[] args) throws Exception {
+	
+	
+	//1.加载类
+	Class.forName("com.mysql.jdbc.Driver");
+	
+	//2.建立链接
+	String url = "jdbc:mysql://localhost:3306/myDB1";
+	String user = "root";
+	String password = "123456";
+	Connection con = DriverManager.getConnection(url, user, password);
+	
+	//3.执行平台
+	/*
+	 * 使用PreparedStatement预处理对象时，建议每条sql语句所有的实际参数，都使用逗号分隔
+	 */
+	String sql = "UPDATE zhangwu set money = ? where name=?";
+	PreparedStatement ps = con.prepareStatement(sql);
+	
+	//4.执行语
+//	Scanner in = new Scanner(System.in);
+//	System.out.println("请输入要修改钱的值");
+//	int money = in.nextInt();
+//	System.out.println("请输入该那个name");
+//	String str = in.next();
+	ps.setObject(1, "1000");
+	ps.setObject(2, "jiayou");
+	
+	
+	int row = ps.executeUpdate();
+	System.out.println(row);
+	
+	//5关闭
+	con.close();ps.close();
+}
+}

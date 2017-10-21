@@ -1,0 +1,8 @@
+1508484267081	Extract local variable 'HelloMyServlet'
+1508484405932	Extract local variable 'Myservlet'
+1508485579185	Extract local variable 'con'
+1508485671119	Extract local variable 'con1'
+1508486177115	Extract local variable 'con1'
+1508486707952	Extract local variable 'Address'
+1508487229226	Extract local variable 'p'
+1508491334676	Extract local variable 'setNameMethod'

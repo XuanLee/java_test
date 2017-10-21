@@ -1,0 +1,13 @@
+package java_Thread_day1;
+
+import java.util.concurrent.Callable;
+
+public class ThreadPoolCallableDemo implements Callable<String>{
+
+	public String call() throws Exception {
+		// TODO Auto-generated method stub
+		
+		return Thread.currentThread().getName();
+	}
+
+}

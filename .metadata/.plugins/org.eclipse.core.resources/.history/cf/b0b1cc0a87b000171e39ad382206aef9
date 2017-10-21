@@ -1,0 +1,10 @@
+package java_Thread_demo2;
+
+public class test_main {
+public static void main(String[] args) {
+	Runnable sr =new SubRunnable();
+	Thread t= new Thread(sr);
+	t.start();
+	
+}
+}

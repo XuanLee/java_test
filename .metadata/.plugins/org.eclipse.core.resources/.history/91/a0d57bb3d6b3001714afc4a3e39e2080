@@ -1,0 +1,12 @@
+package java_Mysql;
+
+import java.sql.Connection;
+
+import tool.LXJdbcTool;
+
+public class tool_test {
+public static void main(String[] args) {
+
+	Connection conn = LXJdbcTool.getConnection();
+}
+}

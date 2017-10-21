@@ -1,0 +1,16 @@
+1508499991785	Extract local variable 'root'
+1508500079499	Extract local variable 'list'
+1508500280678	Extract local variable 'name'
+1508501089057	Extract local variable 'doc'
+1508501245007	Extract local variable 'rootElement'
+1508501369565	Extract local variable 'student'
+1508501390701	Extract local variable 'nameE'
+1508501674777	Extract local variable 'outPut'
+1508502071158	Delete element
+1508502305860	Delete element
+1508504058860	Extract local variable 'root'
+1508504152127	Extract local variable 'list'
+1508504377272	Extract local variable 'car'
+1508504519190	Extract local variable 'elementIterator'
+1508504679283	Extract local variable 'attribute'
+1508505414621	Extract local variable 'price'

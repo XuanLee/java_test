@@ -1,0 +1,67 @@
+package com.lx._reflect_text;
+
+
+import java.lang.reflect.Constructor;
+
+import org.junit.Test;;
+public class TestApp {
+ 
+	//正常执行
+	//@Test
+	public void demo1(){
+		
+		MyServlet ms = new HelloMyServlet();
+		ms.init();
+		ms.destory();
+		ms.service();
+	}
+	
+	//反射执行
+	@Test
+	public void demo2(){
+		//1.拿到HelloMyServlet 类名
+		Class<HelloMyServlet> myServletClass = HelloMyServlet.class;
+		//Class myServletClass = Class.forName("com.lx._reflect.HelloMyServlet");
+		 
+		MyServlet m1;
+		try {
+			//2.拿到 HelloMyServlet new的对象
+			m1 = (HelloMyServlet) myServletClass.newInstance();
+			m1.destory();
+			m1.init();
+			m1.service();
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	//反射执行 获取属性 方法 构造方法
+	@Test
+	public void demo3() throws Exception, Throwable{
+		//1.获取类名
+		Class<HelloMyServlet> myClass1 = HelloMyServlet.class;
+		//2.Constructor获取构造函数
+		//2.1 无参构造函数
+		Constructor  con = myClass1.getConstructors();
+		//2.2 有参构造函数 
+		//parameterTypes:参数类型
+		//出错原因 属性私有化 解决办法 强制拿到
+//		Constructor con1 = myClass1.getConstructor(String.class,String.class,String.class);
+		
+		Constructor con1 = myClass1.getDeclaredConstructor(String.class,String.class,String.class);
+		
+		//3.实例化
+		Person p = (Person) con1.newInstance("lx","18","盐城");
+		p.toString();
+	}
+	
+	
+	
+	
+	
+}

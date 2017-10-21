@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars> 
+  <car> 
+    <name>奔驰</name>  
+    <price id=1>88W</price> 
+  </car> 
+</cars>

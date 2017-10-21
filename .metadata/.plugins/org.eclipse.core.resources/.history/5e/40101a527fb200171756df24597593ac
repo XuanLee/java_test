@@ -1,0 +1,27 @@
+package java_Thread_day1_test;
+
+import java.util.concurrent.Callable;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class Tickets implements Callable{
+
+	private int tickess=100;
+	Object o =new Object();
+	public Object call() throws Exception {
+		// TODO Auto-generated method stub
+		synchronized (o) {
+			func();
+		}
+	return null;
+	}
+	public  void func(){
+		while(true){
+			if(tickess>0)
+			{
+				System.out.println(Thread.currentThread().getName()+"还剩"+--tickess);
+			}
+			
+		}
+	}
+}

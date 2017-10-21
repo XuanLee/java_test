@@ -1,0 +1,10 @@
+package java_Mysql;
+
+import tool.LXJdbcTool;
+
+public class tool_test {
+public static void main(String[] args) {
+
+	LXJdbcTool
+}
+}

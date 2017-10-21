@@ -1,0 +1,18 @@
+package java_Thread_tickets;
+
+public class test_main {
+public static void main(String[] args) {
+		//CopyOfTickets tickets =new CopyOfTickets();
+		Tickets tickets =new Tickets();
+
+		Thread t = new Thread(tickets);
+		Thread t1 = new Thread(tickets);
+		Thread t2 = new Thread(tickets);
+		Thread t3= new Thread(tickets);
+
+		t.start();
+		t1.start();
+		t2.start();
+		t3.start();
+}
+}

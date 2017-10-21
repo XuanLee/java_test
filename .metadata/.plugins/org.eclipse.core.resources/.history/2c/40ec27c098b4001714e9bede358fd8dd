@@ -1,0 +1,54 @@
+package java_DBUtils;
+
+import java.io.IOException;
+import java.sql.Connection;
+
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.ResultSetHandler;
+import org.apache.commons.dbutils.handlers.ArrayHandler;
+
+import tool.LXJdbcTool;
+
+public class QueryRunner_demo1 {
+public static void main(String[] args) throws Exception {
+	
+		//insert();
+		//update();
+		ArrayHandler();	
+	}
+
+
+	private static void ArrayHandler() throws Exception {
+		QueryRunner qr = new QueryRunner();
+		String sql = "select * from zhangwu where money>?";
+		Connection conn = LXJdbcTool.getConnection();
+		Object [] params = {"500"};
+		ArrayHandler aH = new ArrayHandler();
+		Object result = qr.query(conn, sql, params, aH);
+		for (Object object : params) {
+			System.out.println(object);
+		}
+		
+}
+
+
+	private static void update() throws Exception {
+			QueryRunner qu = new QueryRunner();
+			String sql = "update zhangwu set money = 1000 where name = ? ";
+			Connection conn = LXJdbcTool.getConnection();
+			Object[] params = {"jiayou"};
+			int row = qu.update(conn, sql, params);
+			System.out.println(row);
+	}
+
+	private static void insert() throws Exception {
+		// TODO Auto-generated method stub
+		// 1.创建QueryRunner对象
+		QueryRunner qu = new QueryRunner();
+		String sql = "insert into zhangwu (name,money) values(?,?)";
+		Connection conn = LXJdbcTool.getConnection();
+		Object[] params = { "吃饭", "200" };
+		int row = qu.update(conn, sql, params);
+		System.out.println(row);
+	}
+}

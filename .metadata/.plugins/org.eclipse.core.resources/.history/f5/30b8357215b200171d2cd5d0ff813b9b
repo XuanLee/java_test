@@ -1,0 +1,18 @@
+package java_Thread_tickets;
+
+public class Tickets implements Runnable{
+   private  int ticket = 100;
+
+public void run() {
+	// TODO Auto-generated method stub
+	while(true){
+		if(ticket>1){
+			System.out.println("票为" + --ticket);
+		}
+	}
+	
+}
+   
+   
+   
+}

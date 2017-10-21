@@ -1,0 +1,11 @@
+package com.lx._reflect_text;
+
+
+import org.junit.Test;;
+public class TestApp {
+ 
+	@Text
+	public void test(){
+		System.out.println("xxx");
+	}
+}

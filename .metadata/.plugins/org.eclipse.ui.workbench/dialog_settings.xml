@@ -19,6 +19,11 @@
 	<section name="NewWizardAction">
 		<item value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jpt.dbws"/>
+			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
+			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory/org.eclipse.emf.codegen.ecore.ui.mappingWizardCategory"/>
+			<item value="org.eclipse.wst.XMLCategory"/>
+			<item value="org.eclipse.ui.Examples"/>
 		</list>
 	</section>
 	<section name="InstallationDialogSettings">

@@ -1,0 +1,16 @@
+package com.lx._reflect_text;
+
+
+import org.junit.Test;;
+public class TestApp {
+ 
+	//正常执行
+	@Test
+	public void demo1(){
+		
+		MyServlet ms = new HelloMyServlet();
+		ms.init();
+		ms.destory();
+		ms.service();
+	}
+}

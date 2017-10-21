@@ -1,0 +1,27 @@
+package java_Thread_day1;
+
+public class SubRunnable_main {
+public static void main(String[] args) {
+//	SubRunnable sun = new SubRunnable();
+//	Thread t= new Thread(sun);
+//	t.start();
+	Thread t =new Thread(new Runnable() {
+		
+		public void run() {
+			// TODO Auto-generated method stub
+		 for(int i=0; i<20;i++){	
+			 System.out.println("run" + i);
+		 }
+		}
+	}).start();
+
+	
+	fun1();
+}
+	static void fun1(){
+		for(int i=0; i<20;i++){
+			System.out.println("fun1"+i);
+		}
+	}
+
+}

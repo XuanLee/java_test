@@ -1,0 +1,20 @@
+package com.lx._reflect_text;
+
+public class HelloMyServlet implements MyServlet {
+
+	public void init() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void service() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void destory() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

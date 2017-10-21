@@ -1,0 +1,7 @@
+package com.lx._reflect_text;
+
+
+import org.junit.*;
+public class TestApp {
+ @Text 
+}

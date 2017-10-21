@@ -1,0 +1,22 @@
+package java_Thread_day1_test;
+
+import java.util.concurrent.Callable;
+
+public class Tickets implements Callable{
+
+	private int tickess=100;
+
+	public Object call() throws Exception {
+		// TODO Auto-generated method stub
+		while(true){
+			if(tickess>0)
+			{
+				System.out.println("还剩"+tickess);
+			}
+			
+			break;
+		}
+		return null;
+	}
+	
+}

@@ -1,0 +1,30 @@
+package tool;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class LXJdbcTool {
+	private  LXJdbcTool(){};
+	static Connection conn ;
+
+	static{
+		try{
+			//通过反射把类加载到内存中
+			Class.forName("com.mysql.jdbc.Driver");
+			//2.获得链接
+			String url = "jdbc:mysql://localhost:3306/myDB1";
+			String username = "root";
+			String password = "123456";
+			 conn = DriverManager.getConnection(url, username, password);
+			
+		}catch (Exception e){
+		System.out.println(e);	
+		}	
+	}
+	
+	public static Connection getConnection(){
+		return conn;
+	}
+	
+	
+}

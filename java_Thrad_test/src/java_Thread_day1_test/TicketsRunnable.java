@@ -1,0 +1,36 @@
+package java_Thread_day1_test;
+
+import java.util.concurrent.Callable;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class TicketsRunnable implements Runnable{
+
+	private int tickess=100;
+	Object o =new Object();
+	public void run() {
+		// TODO Auto-generated method stub
+
+			System.out.println("谁进入这个方法"+Thread.currentThread().getName());
+			while(true){
+				synchronized (o) {
+				if(tickess>0)
+				{
+					
+						System.out.println(Thread.currentThread().getName()+"还剩"+--tickess);
+					
+				}
+				if(tickess == 0)
+					break;
+			}	
+	}
+//			for(int i=0;i<20;i++){
+//				System.out.println(Thread.currentThread().getName()+"去买水了");
+//				}
+			
+			
+			
+}
+
+	
+}
